@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>play the song</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="her-panel">
+    <canvas id="her" width="54" height="46"></canvas>
+    <div id="bubble">...</div>
+  </section>
+  <div id="hud">
+    <span id="score">Score: 0</span>
+    <span id="misses">Misses: 0/20</span>
+    <span id="stageLabel">Stage: 1/5 (0%)</span>
+    <span id="best">Best: 0</span>
+  </div>
+  <div id="radio">Radio: off</div>
+  <progress id="songProgress" value="0" max="1"></progress>
+  <div id="volumeRow">
+    <label for="volume">Volume</label>
+    <input type="range" id="volume" min="0" max="100" value="70">
+  </div>
+  <div id="controls">
+    <button id="quit">Quit game</button>
+    <button id="nextTrack" disabled>Next track</button>
+  </div>
+  <div id="stage">
+    <canvas id="game" width="360" height="480"></canvas>
+    <img id="gif" hidden alt="">
+    <div id="overlay">
+      <h1 id="title">play the song</h1>
+      <p id="info"></p>
+      <label for="name">What's your name?</label>
+      <input id="name" maxlength="12" autocomplete="off" placeholder="Your name">
+      <label for="difficulty">Difficulty</label>
+      <select id="difficulty"></select>
+      <label for="track">Track</label>
+      <select id="track"></select>
+      <button id="play">Play</button>
+      <p class="small">Move with the arrow keys or A / D. On a phone, drag your finger.</p>
+    </div>
+  </div>
+</main>
+<div id="goodbye" hidden>
+  <p>You quit the game. You can close this tab.</p>
+  <button id="reopen">Open the game again</button>
+</div>
+<script src="sprites.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
